@@ -38,15 +38,17 @@ def takeCommand():
         print("What can I help you with?")
         speak("What can I help you with?")
         print("Listening...")
+        r.pause_threshold = 1
+        r.adjust_for_ambient_noise(source, duration=1)
         audio=r.listen(source)
 
         try:
             statement=r.recognize_google(audio,language='en')
             print(f"You said: {statement}\n")
 
-        except:
+        except sr.UnknownValueError:
             speak("I'm sorry, I didn't catch that")
-            return "None"
+            takeCommand()
         return statement
 
 print("Please wait while your assistant loads...")
