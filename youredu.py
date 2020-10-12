@@ -15,7 +15,6 @@ import webbrowser
 import os
 import time
 import subprocess
-from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
@@ -107,9 +106,6 @@ elif 'news' in statement:
   speak('Here are some headlines from the BBC news, Happy reading!')
   time.sleep(6)
 
-elif "camera" in statement or "take a photo" in statement:
-  ec.capture(0,"robo camera","image.jpg")
-
 elif 'search'  in statement:
   statement = statement.replace("search", "")
   webbrowser.open_new_tab(statement)
@@ -126,7 +122,7 @@ elif 'what is' in statement:
 
 elif 'who are you' in statement or 'what can you do' in statement:
   speak('I am your personal productivity assistant YourEdu. I am programmed to minor tasks like'
-  'opening youtube,google chrome, gmail and stackoverflow ,predict time,take a photo,search wikipedia' 
+  'opening youtube,google chrome, gmail and stackoverflow ,predict time,search wikipedia' 
   'get top headline news from BBC and you can ask me computational or geographical questions too!')
 
 elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
