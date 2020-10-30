@@ -1,3 +1,5 @@
 #YourEdu
+I am a student and I know how beneficial it is to have an assistant to help you with your studies.
+Keeping this in mind, I've created YourEdu.
 YourEdu is a virtual assistant that is built to help students get help for their School-related projects.
 It can be used as a everyday assistant too because it has all the features of one.
